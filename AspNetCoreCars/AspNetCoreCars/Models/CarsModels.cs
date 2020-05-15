@@ -8,6 +8,7 @@ namespace AspNetCoreCars.Models
         public bool NewCars { get; set; }
         [Required]
         public string CompanyName { get; set; }
-        public DateTimeOffset? CarModel { get; set; }
+        public int Year { get; set; }
+        public int CarsPrice { get; set; }
     }
 }

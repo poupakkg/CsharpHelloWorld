@@ -1,0 +1,29 @@
+@model CarsViewModel
+@{
+ViewData["Title"] = "Cars Model";
+}
+<div class="panel panel-default Cars-panel">
+    <div class="panel-heading">@ViewData["CarsName"]</div>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <td>&#x2714;</td>
+                <td>CarName</td>
+                <td>Year</td>
+            </tr>
+        </thead>
+        @foreach (var item in Model.Cars)
+{
+        <tr>
+            <td>
+                <input type="checkbox" class="done-checkbox">
+            </td>
+            <td>@Cars.Name</td>
+            <td>@Cars.Year</td>
+        </tr>
+}
+    </table>
+    <div class="panel-footer add-item-form">
+        <!-- Cars: Add item form -->
+    </div>
+</div>
